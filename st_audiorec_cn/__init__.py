@@ -5,16 +5,16 @@ from io import BytesIO
 import streamlit.components.v1 as components
 
 
-def st_audiorec():
+def st_audiorec_cn():
     # get parent directory relative to current directory
     parent_dir = os.path.dirname(os.path.abspath(__file__))
     # Custom REACT-based component for recording client audio in browser
     build_dir = os.path.join(parent_dir, "frontend/build")
     # specify directory and initialize st_audiorec object functionality
-    st_audiorec = components.declare_component("st_audiorec", path=build_dir)
+    st_audiorec_cn = components.declare_component("st_audiorec_cn", path=build_dir)
 
     # Create an instance of the component: STREAMLIT AUDIO RECORDER
-    raw_audio_data = st_audiorec()  # raw_audio_data: stores all the data returned from the streamlit frontend
+    raw_audio_data = st_audiorec_cn()  # raw_audio_data: stores all the data returned from the streamlit frontend
     wav_bytes = None                # wav_bytes: contains the recorded audio in .WAV format after conversion
 
     # the frontend returns raw audio data in the form of arraybuffer
